@@ -1,0 +1,74 @@
+* {
+  background-color: bisque;
+  font-weight: 700;
+  margin: 5px;
+
+}
+
+#counter-container {
+  display: flex;
+  height: 95vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#counter {
+  font-size: 8rem;
+}
+
+.btn {
+  width: 90px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Pulsante rosso (-) */
+.btn-decrease {
+  background-color: #e63946;
+}
+
+.btn-decrease:hover {
+  background-color: #d62828;
+}
+
+.btn-decrease:active {
+  background-color: #b71c1c;
+  transform: scale(0.95); 
+}
+
+/* Pulsante verde (+) */
+.btn-increase {
+  background-color: #2a9d8f; 
+}
+
+.btn-increase:hover {
+  background-color: #21867a;
+}
+
+.btn-increase:active {
+  background-color: #1b5f56;
+  transform: scale(0.95); 
+}
+
+/* Pulsante grigio (reset) */
+.btn-reset {
+  background-color: #6c757d; 
+  color: #f8f9fa;
+}
+
+.btn-reset:hover {
+  background-color: #5a6268;
+}
+
+.btn-reset:active {
+  background-color: #495057;
+  transform: scale(0.95);
+}
