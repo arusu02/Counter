@@ -2,15 +2,16 @@
 
 Struttura del Progetto
 Il progetto è organizzato come segue:
-
-/counter <br>
-├── /assets <br>
-│   ├── /js. <br>
-│   │   └── script.js <br>
-│   └── /css. <br>
-│       └── style.css <br>
-│ <br>
-└── index.html <br>
+```
+/counter 
+├── /assets 
+│   ├── /js. 
+│   │   └── script.js 
+│   └── /css. 
+│       └── style.css 
+│ 
+└── index.html
+```
 Descrizione delle Cartelle e dei File
 /css: Contiene tutti i file CSS per la stilizzazione del sito.
 
