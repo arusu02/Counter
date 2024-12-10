@@ -3,7 +3,7 @@
 Struttura del Progetto
 Il progetto è organizzato come segue:
 
-/counter
+/counter <br>
 ├── /assets
 │   ├── /js.
 │   │   └── script.js
