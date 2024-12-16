@@ -1,51 +1,81 @@
-const counter = document.getElementById('counter');
-const increaseButton = document.getElementById('increase');
-const decreaseButton = document.getElementById('decrease');
-const resetButton = document.getElementById("reset")
+document.addEventListener('DOMContentLoaded', () => {
+  // Creazione dinamica del DOM
+  // con style CSS
+  const container = document.createElement('div');
+  container.id = 'counter-container';
+  container.style.display = 'flex';
+  container.style.flexDirection = 'column';
+  container.style.alignItems = 'center';
+  container.style.justifyContent = 'center';
+  container.style.height = '95vh';
 
-// Sezione per l'azione del bottone
-increaseButton.addEventListener('click', increment);
-decreaseButton.addEventListener('click', decrease);
-resetButton.addEventListener('click', resetbtn);
+  const counterDisplay = document.createElement('span');
+  counterDisplay.id = 'counter';
+  counterDisplay.textContent = '0';
+  counterDisplay.style.fontSize = '8rem';
 
-// settiamo il valore del count 0 - punto di partenza
-let counterValue = 0;
+  const btnContainer = document.createElement('div');
+  btnContainer.className = 'container-btn';
+  btnContainer.style.display = 'flex';
+  btnContainer.style.gap = '10px';
 
-/*
-counter = 0 black
-counter > 0 green
-counter < 0 red
-*/ 
-function updateCounter() {
-  counter.textContent = counterValue;
+  const decreaseButton = document.createElement('button');
+  decreaseButton.id = 'decrease';
+  decreaseButton.textContent = '-';
+  decreaseButton.className = 'btn btn-decrease';
 
-  if (counterValue > 0) {
-    counter.style.color = "green"
-  } else if (counterValue < 0) {
-    counter.style.color = "red"
-  } else {
-    counter.style.color = "black"
+  const increaseButton = document.createElement('button');
+  increaseButton.id = 'increase';
+  increaseButton.textContent = '+';
+  increaseButton.className = 'btn btn-increase';
+
+  const resetButton = document.createElement('button');
+  resetButton.id = 'reset';
+  resetButton.textContent = 'Reset';
+  resetButton.className = 'btn btn-reset';
+
+  // Append degli elementi al DOM
+  btnContainer.appendChild(decreaseButton);
+  btnContainer.appendChild(increaseButton);
+  container.appendChild(counterDisplay);
+  container.appendChild(btnContainer);
+  container.appendChild(resetButton);
+  document.body.appendChild(container);
+
+  // Logica del contatore
+  let counterValue = 0;
+
+  function updateCounter() {
+    counterDisplay.textContent = counterValue;
+
+    if (counterValue > 0) {
+      counterDisplay.style.color = 'green';
+    } else if (counterValue < 0) {
+      counterDisplay.style.color = 'red';
+    } else {
+      counterDisplay.style.color = 'black';
+    }
   }
-}
 
-// Funzione per aumentare il counter
-function increment() {
-  counterValue++;
+  function increment() {
+    counterValue++;
+    updateCounter();
+  }
 
-  updateCounter();
-}
+  function decrease() {
+    counterValue--;
+    updateCounter();
+  }
 
-// funzione per diminuire il counter
-function decrease() {
-  counterValue--;
+  function resetCounter() {
+    counterValue = 0;
+    updateCounter();
+  }
 
-  updateCounter();
-}
+  // Event listeners
+  increaseButton.addEventListener('click', increment);
+  decreaseButton.addEventListener('click', decrease);
+  resetButton.addEventListener('click', resetCounter);
+});
 
-// funzione per resettare il counter
-function resetbtn() {
-  counterValue = 0;
-
-  updateCounter();
-} 
 
