@@ -17,7 +17,7 @@
   font-size: 8rem;
 }
 
-.btn {
+button {
   width: 90px;
   height: 60px;
   font-size: 20px;
@@ -31,44 +31,44 @@
 }
 
 /* Pulsante rosso (-) */
-.btn-decrease {
+#decrease {
   background-color: #e63946;
 }
 
-.btn-decrease:hover {
+#decrease:hover {
   background-color: #d62828;
 }
 
-.btn-decrease:active {
+#decrease:active {
   background-color: #b71c1c;
   transform: scale(0.95); 
 }
 
 /* Pulsante verde (+) */
-.btn-increase {
+#increase {
   background-color: #2a9d8f; 
 }
 
-.btn-increase:hover {
+#increase:hover {
   background-color: #21867a;
 }
 
-.btn-increase:active {
+#increase:active {
   background-color: #1b5f56;
   transform: scale(0.95); 
 }
 
 /* Pulsante grigio (reset) */
-.btn-reset {
+#reset {
   background-color: #6c757d; 
   color: #f8f9fa;
 }
 
-.btn-reset:hover {
+#reset:hover {
   background-color: #5a6268;
 }
 
-.btn-reset:active {
+#reset:active {
   background-color: #495057;
   transform: scale(0.95);
 }
